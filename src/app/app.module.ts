@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShuffleTeamsComponent } from './shuffle-teams/shuffle-teams.component';
 import { HomeComponent } from './home/home.component';
+import { SideNavigationComponent } from './side-navigation/side-navigation.component';
+import { MatListModule } from '@angular/material/list'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     ShuffleTeamsComponent,
-    HomeComponent
+    HomeComponent,
+    SideNavigationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
