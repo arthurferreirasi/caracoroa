@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { ShuffleTeamsComponent } from './shuffle-teams/shuffle-teams.component';
 import { HomeComponent } from './home/home.component';
 import { SideNavigationComponent } from './side-navigation/side-navigation.component';
-import { MatListModule } from '@angular/material/list'; 
+import { MatListModule } from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MatListModule } from '@angular/material/list';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatListModule
+    MatListModule,
+    MatButtonModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
