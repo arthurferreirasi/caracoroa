@@ -15,24 +15,8 @@ interface SideNavToggle {
     trigger('fadeInOut', [
       transition(':enter', [
         style({opacity: 0}),
-        animate('400ms', 
+        animate('350ms', 
           style({opacity: 1})
-        )
-      ]),
-      transition(':leave', [
-        style({opacity: 1}),
-        animate('400ms', 
-          style({opacity: 0})
-        )
-      ])
-    ]),
-    trigger('rotate', [
-      transition(':enter', [
-        animate('1000ms', 
-          keyframes([
-            style({transform: 'rotate(0deg)', offset: '0'}),
-            style({transform: 'rotate(0.5turn)', offset: '1'}),
-          ])  
         )
       ])
     ])
@@ -43,7 +27,7 @@ export class SideNavComponent implements OnInit {
 
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   
-  collapsed = true;
+  collapsed = false;
   screenWidth = 0;
   navData = navbarData;
 

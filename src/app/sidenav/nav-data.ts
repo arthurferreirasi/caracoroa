@@ -1,17 +1,17 @@
 export const navbarData = [
     {
         routeLink: 'quickstart',
-        icon: 'fal fa-home',
+        icon: 'play_circle_outline',
         label: 'Partida Rápida'
     },
     {
         routeLink: 'tournaments',
-        icon: 'fal fa-home',
+        icon: 'group',
         label: 'Torneios'
     },
     {
         routeLink: 'preferences',
-        icon: 'fal fa-home',
+        icon: 'settings',
         label: 'Preferências'
     }
 ]

@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ShuffleTeamsComponent } from './shuffle-teams/shuffle-teams.component';
+import { QuickstartComponent } from './quickstart/quickstart.component';
+import { TournamentsComponent } from './tournaments/tournaments.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'quickstart', pathMatch: 'full'},
-  {path: 'quickstart', component: ShuffleTeamsComponent},
-  {path: 'tournaments', component: ShuffleTeamsComponent},
-  {path: 'preferences', component: ShuffleTeamsComponent}
+  {path: 'quickstart', component: QuickstartComponent},
+  {path: 'tournaments', component: TournamentsComponent},
+  {path: 'preferences', component: QuickstartComponent}
 ];
 
 @NgModule({
