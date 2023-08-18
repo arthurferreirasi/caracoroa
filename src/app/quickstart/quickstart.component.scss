@@ -1,8 +1,31 @@
+@import 'src/styles.scss';
+
 .quickstart-input-container {
+    background: rgba(0, 0, 0, 0.486);
     color: white;
-    width: 16rem;
+    width: 70%;
     height: 16rem;
     border-radius: 0.625rem;
     padding: 1rem;
-    box-shadow: 0.15rem 0.15rem 0.3rem 0 #20c200;
+    box-shadow: 0.15rem 0.15rem 0.3rem 0 $primary-color;
+}
+
+.list-players-textarea {
+    color: white;
+    margin-top: 1rem;
+    font-family: 'Courier New', monospace !important;
+    font-size: 12px;
+}
+
+.shuffle-button {
+    margin-top: 5rem;
+    margin-left: 5rem;
+    background-color: green;
+    color: black;
+    position: absolute;
+}
+
+.shuffle-button:hover {
+    background-color: $primary-color;
+    color: white;
 }

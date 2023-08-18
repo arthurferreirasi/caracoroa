@@ -1,3 +1,23 @@
-<div class="quickstart-input-container">
-    <h1>Hello World!</h1>
-</div>
+<mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile>
+        <div class="quickstart-input-container">
+            <form (ngSubmit)="addPlayer()" class="player-form">
+                <mat-form-field>
+                    <label>Lista de jogadores:</label>
+                    <textarea matInput name="listPlayers" [(ngModel)]="players" (input)="canRun()" rows="5" class="list-players-textarea" required
+                        placeholder="Ex. Neymar; Messi; Cristiano Ronaldo; Ronaldo">
+                    </textarea>
+                    <mat-error *ngIf="isInvalidPlayers">please fill above field.</mat-error>
+                </mat-form-field>
+                <button type="submit" mat-mini-fab class="shuffle-button" [disabled]="isInvalidPlayers">
+                    <mat-icon>shuffle</mat-icon>
+                </button>
+            </form>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="quickstart-input-container">
+            <h1>Hello World!</h1>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

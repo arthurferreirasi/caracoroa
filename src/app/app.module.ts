@@ -8,6 +8,12 @@ import { BodyComponent } from './body/body.component';
 import { QuickstartComponent } from './quickstart/quickstart.component';
 import { TournamentsComponent } from './tournaments/tournaments.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { TeamDrawService } from './services/team-draw.service';
+
 
 @NgModule({
   declarations: [
@@ -15,15 +21,21 @@ import { MatIconModule } from '@angular/material/icon';
     SideNavComponent,
     BodyComponent,
     QuickstartComponent,
-    TournamentsComponent
+    TournamentsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule
   ],
-  providers: [],
+  providers: [
+    TeamDrawService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
