@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { TeamDrawService } from './services/team-draw.service';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { TeamDrawService } from './services/team-draw.service';
     MatGridListModule,
     MatInputModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule
   ],
   providers: [
     TeamDrawService

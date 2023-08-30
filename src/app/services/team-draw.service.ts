@@ -1,8 +1,8 @@
 import { Match } from "../interfaces/matches-structure";
 
 export class TeamDrawService {
-
-  private matches: Array<Match> = [];
+  private singleMatch!: Match;
+  private matchesList!: Array<Match>;
 
   public shuffleArray(teams: string[]): string[] {
     for (let i = teams.length - 1; i > 0; i--) {
@@ -13,14 +13,16 @@ export class TeamDrawService {
   }
 
   public drawTeamsForTournament(teams: string[]): Array<Match> {
-    // Make a copy of the teams array to avoid modifying the original array
+    this.matchesList = [];
     const shuffledTeams = this.shuffleArray(teams.slice());
     if (shuffledTeams.length % 2 !== 0) {
-      shuffledTeams.push("BYE"); // "BYE" indicates that the team will have a bye (free) round
+      shuffledTeams.push("BYE");
     }
-    for (let i = 0; i < shuffledTeams.length / 2; i += 2) {
-      this.matches.push()
+    for (let i = 0; i < shuffledTeams.length; i += 2) {
+      this.singleMatch = new Match(shuffledTeams[i], shuffledTeams[i+1]);
+      this.matchesList.push(this.singleMatch);
     }
-    return this.matches;
+    
+    return this.matchesList;
   }
 }

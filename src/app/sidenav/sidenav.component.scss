@@ -82,18 +82,15 @@
 
   .sidenav-nav-item:hover {
     .sidenav-nav-link {
-      background-color: white;
-      color: black;
-
+      color: yellow;
+      border-top: yellow;
     }
   }
 }
 
 .active {
-  background-color: white;
-
   .sidenav-link-icon,
   .sidenav-link-text {
-    color: black;
+    color: #20c200;
   }
 }

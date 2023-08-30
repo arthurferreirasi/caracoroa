@@ -20,9 +20,13 @@ export class QuickstartComponent implements OnInit{
   listPlayers!: string[];
   isInvalidPlayers!: boolean;
   teamsMatches: Array<Match> = [];
+  isReady: boolean = false;
+  displayedColumns: string[] = ['Time de casa', 'Time visitante'];
+  dataSource!: any[];
 
   ngOnInit(): void {
     this.isInvalidPlayers = true;
+    this.dataSource = [];
   }
 
   canRun(): boolean {
@@ -35,9 +39,16 @@ export class QuickstartComponent implements OnInit{
       return;
     this.listPlayers = this.formatListPlayers(this.players);
     this.players = '';
-    console.log(this.listPlayers);
     this.teamsMatches = this.teamDrawService.drawTeamsForTournament(this.listPlayers);
-    console.log(this.teamsMatches);
+    this.dataSource = this.buildDataSource(this.teamsMatches);
+    this.isReady = true;
+  }
+
+  private buildDataSource(teamsMatches: Array<Match>): any[]{
+    return teamsMatches.map(x => ({
+      'Time de casa': x.homeTeam,
+      'Time visitante': x.visitingTeam
+    }));
   }
 
   private formatListPlayers(players: string): string[]{

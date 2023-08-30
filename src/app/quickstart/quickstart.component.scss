@@ -3,12 +3,38 @@
 .quickstart-input-container {
     background: rgba(0, 0, 0, 0.486);
     color: white;
-    width: 70%;
+    width: 80%;
     height: 16rem;
     border-radius: 0.625rem;
     padding: 1rem;
     box-shadow: 0.15rem 0.15rem 0.3rem 0 $primary-color;
+    max-height: 20rem;
+    overflow-y: auto;
 }
+
+.quickstart-table-container {
+    background: rgba(0, 0, 0, 0.486);
+    color: white;
+    width: 80%;
+    height: 32rem;
+    border-radius: 0.625rem;
+    padding: 1rem;
+    box-shadow: 0.15rem 0.15rem 0.3rem 0 $primary-color;
+    // max-height: 20rem;
+    overflow-y: auto;
+}
+
+.quickstart-table-container > table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+        position: sticky;
+        margin-top: 20%;
+    }
+}
+
+ 
 
 .list-players-textarea {
     color: white;

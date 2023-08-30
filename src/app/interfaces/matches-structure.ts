@@ -1,4 +1,9 @@
-export class Match{
-    public static homeTeam: string;
-    public static visitingTeam: string;
+export class Match {
+    homeTeam: string;
+    visitingTeam: string;
+
+    constructor(home: string, visiting: string){
+        this.homeTeam = home;
+        this.visitingTeam = visiting;
+    }
 }
