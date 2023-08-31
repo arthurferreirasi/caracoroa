@@ -7,7 +7,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'quickstart', pathMatch: 'full'},
   {path: 'quickstart', component: QuickstartComponent},
   {path: 'tournaments', component: TournamentsComponent},
-  {path: 'preferences', component: QuickstartComponent}
+  {path: 'preferences', component: TournamentsComponent}
 ];
 
 @NgModule({
