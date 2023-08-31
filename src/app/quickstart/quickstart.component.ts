@@ -21,7 +21,7 @@ export class QuickstartComponent implements OnInit{
   isInvalidPlayers!: boolean;
   teamsMatches: Array<Match> = [];
   isReady: boolean = false;
-  displayedColumns: string[] = ['Time de casa', 'Time visitante'];
+  displayedColumns: string[] = ['Time de casa', 'vs', 'Time visitante'];
   dataSource!: any[];
 
   ngOnInit(): void {
@@ -53,8 +53,8 @@ export class QuickstartComponent implements OnInit{
 
   private formatListPlayers(players: string): string[]{
     var listPlayers = players.split('\n');
-    listPlayers = listPlayers.map(x => x.replace(/[^a-zA-Z\s]/g, '')
-    );
+    listPlayers = listPlayers.filter(item => item.trim() !== "");
+    listPlayers = listPlayers.map(x => x.replace(/[^a-zA-Z\sáÁàÀâÂãÃéÉêÊíÍóÓôÔõÕúÚüÜ]/g, ''));
     return listPlayers;
   }
 }

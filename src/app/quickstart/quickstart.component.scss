@@ -1,5 +1,15 @@
 @import 'src/styles.scss';
 
+.quickstart-column-container {
+    display: flex;
+    flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+   height: 100%;
+   width: 100%;
+   padding: 1rem;
+}
+
 .quickstart-input-container {
     background: rgba(0, 0, 0, 0.486);
     color: white;
@@ -10,6 +20,19 @@
     box-shadow: 0.15rem 0.15rem 0.3rem 0 $primary-color;
     max-height: 20rem;
     overflow-y: auto;
+
+    .shuffle-button {
+        margin-top: 5rem;
+        margin-left: 5rem;
+        background-color: green;
+        color: black;
+        position:absolute;
+    }
+    
+    .shuffle-button:hover {
+        background-color: $primary-color;
+        color: white;
+    }
 }
 
 .quickstart-table-container {
@@ -20,7 +43,6 @@
     border-radius: 0.625rem;
     padding: 1rem;
     box-shadow: 0.15rem 0.15rem 0.3rem 0 $primary-color;
-    // max-height: 20rem;
     overflow-y: auto;
 }
 
@@ -43,15 +65,4 @@
     font-size: 12px;
 }
 
-.shuffle-button {
-    margin-top: 5rem;
-    margin-left: 5rem;
-    background-color: green;
-    color: black;
-    position: absolute;
-}
 
-.shuffle-button:hover {
-    background-color: $primary-color;
-    color: white;
-}

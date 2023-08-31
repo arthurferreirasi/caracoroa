@@ -1,5 +1,6 @@
-<mat-grid-list cols="2" rowHeight="350px">
+<mat-grid-list cols="2" rowHeight="100%">
     <mat-grid-tile>
+        <div class="quickstart-column-container">
         <div class="quickstart-input-container">
             <form (ngSubmit)="addPlayer()" class="player-form">
                 <mat-form-field>
@@ -14,10 +15,11 @@
                 </button>
             </form>
         </div>
+    </div>
     </mat-grid-tile>
     <mat-grid-tile>
-        <div class="quickstart-table-container" >
-            <!-- *ngIf="isReady" -->
+        <div class="quickstart-column-container">
+        <div class="quickstart-table-container" *ngIf="isReady">
             <table mat-table [dataSource]="dataSource" multiTemplateDataRows>
                 <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
                     <th mat-header-cell *matHeaderCellDef> {{column}} </th>
@@ -27,5 +29,6 @@
                 <tr mat-row *matRowDef="let item; let row; columns: displayedColumns;"></tr>
             </table>
         </div>
+    </div>
     </mat-grid-tile>
 </mat-grid-list>
