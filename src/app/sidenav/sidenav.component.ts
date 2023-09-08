@@ -18,6 +18,12 @@ interface SideNavToggle {
         animate('350ms', 
           style({opacity: 1})
         )
+      ]),
+      transition(':leave', [
+        style({opacity: 1}),
+        animate('150ms', 
+          style({opacity: 0})
+        )
       ])
     ])
   ]

@@ -1,1 +1,25 @@
-<p>tournaments works!</p>
+
+    <div class="tournament-input-container">
+        <form (ngSubmit)="addTeams()" id="tournament-input-form">
+            <mat-form-field>
+                <label>Nome do torneio:</label>
+                <input matInput class="tournament-name-input" type="text" name="tournamentName" placeholder="Ex. Libertadores">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <label>Quantos times?</label>
+                <input matInput class="quantity-teams-input" type="number" name="quantityTeams" required placeholder="32">
+            </mat-form-field>
+            <mat-form-field id="tournament-input-textarea">
+                <label>Lista de times:</label>
+                <textarea matInput class="list-teams-textarea" name="listTeams" [(ngModel)]="teams" rows="4" (input)="canRun()" required
+                    placeholder="Ex. Cruzeiro, Flamengo, Corinthians, São Paulo, Gremio, etc.">
+                </textarea>
+                <mat-error *ngIf="isInvalidTeams">please fill above field.</mat-error>
+            </mat-form-field>
+            
+            <button type="submit" mat-mini-fab class="shuffle-button" [disabled]="isInvalidTeams">
+                <mat-icon>shuffle</mat-icon>
+            </button>
+        </form>
+    </div>

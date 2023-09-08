@@ -1,0 +1,61 @@
+@import 'src/styles.scss';
+
+.tournament-input-container {
+    background: rgba(0, 0, 0, 0.600);
+    color: white;
+    border-radius: 0.625rem;
+    padding: 1rem;
+    box-shadow: 0.15rem 0.15rem 0.3rem 0 $primary-color;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    #tournament-input-form {
+        width: 100%;
+    }
+    #tournament-input-textarea {
+        width: 50%;
+    }
+}
+
+.list-teams-textarea {
+    color: white;
+    margin-top: 1rem;
+    font-family: 'Courier New', monospace !important;
+    resize: none;
+    width: 100%;
+}
+
+.tournament-name-input {
+    color: white;
+    margin-top: 1rem;
+    font-family: 'Courier New', monospace !important;
+    text-align: center;
+    resize: none;
+}
+
+.quantity-teams-input {
+    color: white;
+    margin-top: 1rem;
+    font-family: 'Courier New', monospace !important;
+    text-align: center;
+    resize: none;
+}
+
+.shuffle-button {
+    margin-top: 3rem;
+    margin-left: 5rem;
+    background-color: green;
+    color: black;
+    position: absolute;
+}
+
+.shuffle-button:hover {
+    background-color: $primary-color;
+    color: white;
+}
+
+
+

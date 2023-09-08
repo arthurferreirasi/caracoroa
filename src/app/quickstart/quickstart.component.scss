@@ -11,7 +11,7 @@
 }
 
 .quickstart-input-container {
-    background: rgba(0, 0, 0, 0.486);
+    background: rgba(0, 0, 0, 0.600);
     color: white;
     width: 80%;
     height: 16rem;
@@ -20,6 +20,7 @@
     box-shadow: 0.15rem 0.15rem 0.3rem 0 $primary-color;
     max-height: 20rem;
     overflow-y: auto;
+    position: relative;
 
     .shuffle-button {
         margin-top: 5rem;
@@ -32,6 +33,13 @@
     .shuffle-button:hover {
         background-color: $primary-color;
         color: white;
+    }
+
+    .loader {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $secondary-color;
     }
 }
 
@@ -56,13 +64,11 @@
     }
 }
 
- 
-
-.list-players-textarea {
+.list-players-textarea{
+    resize: none;
     color: white;
     margin-top: 1rem;
     font-family: 'Courier New', monospace !important;
-    font-size: 12px;
 }
 
 

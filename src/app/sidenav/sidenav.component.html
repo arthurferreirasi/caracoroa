@@ -1,7 +1,7 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
     <div class="logo-container">
         <button class="logo-button" (click)="toggleCollapse()"><img class="logo" src="../../assets/logo3.png" /></button>
-        <div class="logo-text" @fadeInOut *ngIf="collapsed">Sorteio</div>
+        <div class="logo-text" @fadeInOut *ngIf="collapsed"><span>Cara ou Coroa</span></div>
     </div>
     <ul class="sidenav-nav">
         <li class="sidenav-nav-item" *ngFor="let data of navData">

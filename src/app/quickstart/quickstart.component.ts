@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, NgForm } from '@angular/forms';
 import { TeamDrawService } from '../services/team-draw.service';
 import { Match } from '../interfaces/matches-structure';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-quickstart',
@@ -23,6 +24,7 @@ export class QuickstartComponent implements OnInit{
   isReady: boolean = false;
   displayedColumns: string[] = ['Time de casa', 'vs', 'Time visitante'];
   dataSource!: any[];
+  isLoading: boolean = false;
 
   ngOnInit(): void {
     this.isInvalidPlayers = true;
@@ -37,6 +39,10 @@ export class QuickstartComponent implements OnInit{
   addPlayer() {
     if(this.canRun())
       return;
+    this.isLoading = true;
+    console.log("LOADING");
+    delay(10000);
+    this.isLoading = false;
     this.listPlayers = this.formatListPlayers(this.players);
     this.players = '';
     this.teamsMatches = this.teamDrawService.drawTeamsForTournament(this.listPlayers);
