@@ -6,7 +6,7 @@
                     <mat-form-field>
                         <label>Lista de jogadores:</label>
                         <textarea matInput class="list-players-textarea" name="listPlayers" [(ngModel)]="players" (input)="canRun()" rows="5" required
-                            placeholder="Ex. Neymar; Messi; Cristiano Ronaldo; Ronaldo; etc">
+                            placeholder="Insira a lista com o nome dos jogadores">
                     </textarea>
                         <mat-error *ngIf="isInvalidPlayers">please fill above field.</mat-error>
                     </mat-form-field>

@@ -2,7 +2,7 @@ export const navbarData = [
     {
         routeLink: 'quickstart',
         icon: 'play_circle_outline',
-        label: 'Partida Rápida'
+        label: 'Tirar times'
     },
     {
         routeLink: 'tournaments',

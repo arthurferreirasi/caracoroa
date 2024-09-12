@@ -4,6 +4,18 @@ export class TeamDrawService {
   private singleMatch!: Match;
   private matchesList!: Array<Match>;
 
+  public drawTeams(players: string[]): any {
+    var teams = new Array<Array<string>>();
+    const shuffledTeams = this.shuffleArray(players.slice());
+    for (let j = 0; j < 5; j++){
+      for (let i = 0; i < shuffledTeams.length; i++){
+        teams[j].push(shuffledTeams[i]);
+      }
+    }
+
+    return teams;
+  }
+
   public shuffleArray(teams: string[]): string[] {
     for (let i = teams.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
